@@ -23,6 +23,20 @@ async function run() {
   try {
     // Connect the client to the server	(optional starting in v4.7)
     await client.connect();
+
+    const hobbiesCollection = client.db("hobbyDB").collection("hobbies");
+
+    app.get("/create-group", async (req, res) => {
+      const result = await hobbiesCollection.find().toArray();
+      res.send(result);
+    });
+
+    app.post("/create-group", async (req, res) => {
+      const newGroup = req.body;
+      console.log(newGroup);
+      const result = await hobbiesCollection.insertOne(newGroup);
+      res.send(result);
+    });
     // Send a ping to confirm a successful connection
     await client.db("admin").command({ ping: 1 });
     console.log(
@@ -42,5 +56,3 @@ app.get("/", (req, res) => {
 app.listen(port, () => {
   console.log(`HobbyHub server running on port: ${port}`);
 });
-
-

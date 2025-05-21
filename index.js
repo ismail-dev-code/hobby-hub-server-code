@@ -62,6 +62,12 @@ async function run() {
       const result = await hobbiesCollection.insertOne(newGroup);
       res.send(result);
     });
+
+    app.delete("/all-group/:id", async (req, res) => {
+      const id = req.params.id;
+      const result = await hobbiesCollection.deleteOne({ _id: new ObjectId(id) });
+      res.send(result);
+    });
     // Send a ping to confirm a successful connection
     await client.db("admin").command({ ping: 1 });
     console.log(

@@ -1,7 +1,7 @@
 const express = require("express");
 const cors = require("cors");
 require("dotenv").config();
-const { MongoClient, ServerApiVersion } = require("mongodb");
+const { MongoClient, ServerApiVersion, ObjectId } = require("mongodb");
 const app = express();
 const port = process.env.PORT || 3000;
 
@@ -37,6 +37,23 @@ async function run() {
         .find({ userEmail: email })
         .toArray();
       res.send(groups);
+    });
+    // get group by ID
+    app.get("/all-group/:id", async (req, res) => {
+      const id = req.params.id;
+      const result = await hobbiesCollection.findOne({ _id: new ObjectId(id) });
+      res.send(result);
+    });
+
+    // update group by ID
+    app.put("/all-group/:id", async (req, res) => {
+      const id = req.params.id;
+      const updatedGroup = req.body;
+      const result = await hobbiesCollection.updateOne(
+        { _id: new ObjectId(id) },
+        { $set: updatedGroup }
+      );
+      res.send(result);
     });
 
     app.post("/create-group", async (req, res) => {

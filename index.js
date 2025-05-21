@@ -26,9 +26,17 @@ async function run() {
 
     const hobbiesCollection = client.db("hobbyDB").collection("hobbies");
 
-    app.get("/create-group", async (req, res) => {
+    app.get("/all-group", async (req, res) => {
       const result = await hobbiesCollection.find().toArray();
       res.send(result);
+    });
+
+    app.get("/my-groups", async (req, res) => {
+      const email = req.query.email;
+      const groups = await hobbiesCollection
+        .find({ userEmail: email })
+        .toArray();
+      res.send(groups);
     });
 
     app.post("/create-group", async (req, res) => {

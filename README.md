@@ -16,14 +16,14 @@ This is the **HobbyHub** backend server built using **Node.js**, **Express.js**,
 
 ## 📁 Project Structure
 
-HOBBYHUB-BACKEND/
+```HOBBYHUB-BACKEND/
 ├── node_modules/
-├── .env
-├── .gitignore
+├── .env # Environment variables
+├── .gitignore # Ignored files and folders
 ├── index.js # Main server file
-├── package.json
-├── package-lock.json
-└── README.md
+├── package.json # Project metadata and dependencies
+├── package-lock.json # Exact dependency versions
+└── README.md # Project documentation```
 
 
 ---

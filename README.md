@@ -14,6 +14,13 @@ This is the **HobbyHub** backend server built using **Node.js**, **Express.js**,
 
 ---
 
+## 🔧 Installation & Setup
+
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/Programming-Hero-Web-Course4/b11a10-server-side-ismail-dev-code
+   cd b11a10-server-side-ismail-dev-code
+   
 ## 📁 Project Structure
 
 ```HOBBYHUB-BACKEND/
@@ -26,11 +33,5 @@ This is the **HobbyHub** backend server built using **Node.js**, **Express.js**,
 └── README.md # Project documentation```
 
 
----
 
-## 🔧 Installation & Setup
 
-1. **Clone the repository:**
-   ```bash
-   git clone https://github.com/Programming-Hero-Web-Course4/b11a10-server-side-ismail-dev-code
-   cd b11a10-server-side-ismail-dev-code

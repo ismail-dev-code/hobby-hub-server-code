@@ -11,10 +11,10 @@ app.use(cors());
 app.use(express.json());
 
 // Initialize Firebase Admin SDK
+const serviceAccount = require("./FIREBASE_SERVICE_ACCOUNT.json");
+
 admin.initializeApp({
-  credential: admin.credential.cert(
-    JSON.parse(process.env.FIREBASE_SERVICE_ACCOUNT)
-  ),
+  credential: admin.credential.cert(serviceAccount),
 });
 
 // JWT verification middleware

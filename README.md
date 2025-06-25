@@ -18,8 +18,8 @@ This is the **HobbyHub** backend server built using **Node.js**, **Express.js**,
 
 1. **Clone the repository:**
    ```bash
-   git clone https://github.com/Programming-Hero-Web-Course4/b11a10-server-side-ismail-dev-code
-   cd b11a10-server-side-ismail-dev-code
+   git clone https://github.com/ismail-dev-code/hobby-hub-server-code
+   cd hobby-hub-server-code
    
 ## 📁 Project Structure
 

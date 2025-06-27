@@ -20,10 +20,7 @@ This is the **HobbyHub** backend server built using **Node.js**, **Express.js**,
    ```bash
    git clone https://github.com/ismail-dev-code/hobby-hub-server-code
    cd hobby-hub-server-code
-<<<<<<< HEAD
-   nodemon index.js
-=======
->>>>>>> 674af7c91881ec1d7f476ed66e934d501d198226
+
    
 ## 📁 Project Structure
 
